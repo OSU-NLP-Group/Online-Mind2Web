@@ -231,14 +231,13 @@ Code under this repo is licensed under a MIT License.
 
 Note: Online-Mind2Web is derived from the original Mind2Web dataset. We kindly ask that you cite both the original and this work when using or referencing the data.
 ```
-@article{xue2025illusionprogressassessingcurrent,
-      title={An Illusion of Progress? Assessing the Current State of Web Agents}, 
-      author={Tianci Xue and Weijian Qi and Tianneng Shi and Chan Hee Song and Boyu Gou and Dawn Song and Huan Sun and Yu Su},
-      year={2025},
-      eprint={2504.01382},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2504.01382}, 
+@inproceedings{
+  xue2025an,
+  title={An Illusion of Progress? Assessing the Current State of Web Agents},
+  author={Tianci Xue and Weijian Qi and Tianneng Shi and Chan Hee Song and Boyu Gou and Dawn Song and Huan Sun and Yu Su},
+  booktitle={Second Conference on Language Modeling},
+  year={2025},
+  url={https://openreview.net/forum?id=6jZi4HSs6o}
 }
 
 @inproceedings{deng2023mind2web,
