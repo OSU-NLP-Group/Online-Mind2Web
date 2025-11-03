@@ -30,6 +30,7 @@
 # Online-Mind2Web benchmark
 
 ## News
+* [11/03/2025] We’ve updated 36 tasks that are no longer valid or involve websites with CAPTCHA verification. Please check out the updated tasks!
 * [07/08/2025] 🎉 Online-Mind2Web has been accepted to COLM 2025!
 * [05/11/2025] Check out our updates in the [paper](https://arxiv.org/abs/2504.01382).
   * The performance of Claude Computer Use 3.7.
@@ -44,6 +45,25 @@ Online-Mind2Web includes 300 diverse tasks from 136 popular websites across vari
 We will regularly update Online-Mind2Web by replacing outdated or invalid tasks (e.g., due to website changes) to maintain its value as a rigorous benchmark for web agents. If you find any tasks are outdated, please reach out to us, and we will update them.
 
 To ensure fair comparisons, we will aim to keep the updated tasks on the same websites as before and with a similar reference length. Additionally, once agent performance saturates on Online-Mind2Web, we will also revise simple tasks to preserve its long-term value.
+
+### Update History
+
+#### 2025/11/03
+**Update summary:**  
+Based on community feedback, we updated 36 tasks that were no longer valid or involved websites with CAPTCHA verification. The updated tasks were carefully designed to preserve similar difficulty and task types, ensuring fair comparison with prior results.
+
+<details>
+<summary>🧩 Updated Task IDs</summary>
+['b7258ee05d75e6c50673a59914db412e', '824eb7bb0ef1ce40bfd49c12182d9428', '8f2611047de227a2ca8bda13f6e2e5fb', '62f1626ce249c31098854f8b38bdd6cf', '79f0bd7df6e685f30f20025cc6755c0a', '5e1b8254c123c80178cc28e0afdb14f0', '816851ff92ff0219acf4364dcc2c4692', 'e7301bb694871429bf2eb36c3a72186c', '3c1ffc3f494e423b3c434c79e35da8f3', '9f1cba613830ca1c6a58f9498c06e679', '9c97bab9c2abfb90a426cbe9addae8d0', '2fc51dd3febd447f0fdcdabca8d944ce', 'eb323dc584156d0eb3a2b90bb8c4b791', 'a0a18ca6a3529f3e97c771aadd42d3a0', 'e7f6cca9a8875f98fee3b711ead3a444', 'f2be37a9a60fbc25b6b11cf622d17352', '2d5a7f95f951a26838289dfd629ae850', '502e864440283214e0180645015f568b', '3adeea7627f4343069f38adae40f73d0', '8f80e64e44e1fada018997b2fe869683', '0a0fa834ce41b5297c6474293383759d', '64345c365f544375357c7b67917f08a0', '33bd2cdcea4fcc42a09a8a1e4e5841c6', '3dca7cbe7d086619d837ff9f5312cebc', '11857213ca01510f12813740afd59918', 'd730f4ff450da1bd60a836163736ef6a', 'fe33894188d20d7469f37a9fd855e7ff', 'e43cbc8a0bf9e999884928d11006f894', 'c577a14301a725e09ccd269a3e0b271e', '2c8ef01a92c71ba9ef2e59bb17eea2b3', '636b07af4dd97c1793733db1fd1b90b8', 'd8e2a81fa621ce4737e5ea85671b630e', '199be0b54a436daee74247971fc684ee', 'd1807551297ac60ecaaabbd2a2ed301a', 'dd44c665cec1e9c929a4c5f074e7844a', '1ab384fb3a791edfb410213cc6b82151']
+</details>
+
+---
+
+#### 2025/04/05
+<details>
+<summary>🧩 Updated Task IDs</summary>
+["c03ee2be3d73556ab789c0ad1cbd3451", "c181f903ec1107b850032c17cad88393", "2c8ef01a92c71ba9ef2e59bb17eea2b3", "d8e2a81fa621ce4737e5ea85671b630e", "63d6866fc000fcb1f153e07604bd1395", "199be0b54a436daee74247971fc684ee"]
+</details>
 
 # Automatic Evaluator via LLM-as-a-Judge (WebJudge)
 To enhance the reliability and scalability of the evaluation process in online environments, We propose a more reliable automatic evaluation method called **WebJudge**, which consists of three parts. (1) Key Point Identification: The model is prompted to identify several key points necessary for completing the task, based on the given instruction and task description. (2) Key Screenshot Identification: Important screenshots are selected from the agent’s trajectory to retain relevant visual evidence while discarding uninformative frames. (3) Outcome Judgment: Output the judgement result based on the task description, key points, key screenshots, and the action history. Our method preserves critical intermediate screenshots while mitigating the token overload issue.
