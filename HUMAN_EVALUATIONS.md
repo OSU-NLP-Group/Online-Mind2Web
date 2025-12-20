@@ -1,4 +1,4 @@
-# Human Evaluation Guidelines for Online Mind2Web
+# Human Evaluations for Online Mind2Web
 
 ## Introduction
 
