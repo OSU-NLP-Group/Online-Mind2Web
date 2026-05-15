@@ -13,17 +13,19 @@ To address these challenges and maintain the integrity of the benchmark, we have
 All human evaluations must follow this standardized process:
 
 1. **Multi-Annotator Review**: Use at least **3 independent annotators plus 1 QA reviewer**. Each annotator evaluates trajectories independently, and the QA reviewer resolves disagreements and spot-checks edge cases.
-2. **Trajectory Review**: Review the full trajectory including task description, action history, screenshots, and final response.
-3. **Key Point Extraction**: Extract and verify all key points explicitly stated in the task description.
-4. **Verification**: Verify each action and screenshot against those key points, checking filters/sorts, apply/submit clicks, and visible effects in results.
-5. **Decision & Documentation**: Decide success/failure based on evaluation criteria; document the exact reason and failure point if failed.
-6. **Recording**: Record the label (`0/1/2`) and maintain detailed reasoning traces for each evaluation.
+2. **Human Attempt**: Each Annotator must attmpet the task themselves, and note down the number of steps taken to complete the task, and track their trajectory taken.
+3. **Trajectory Review**: Review the full submitted trajectory including task description, action history, screenshots, and final response. Compare against self-attempted human trajectory to verify if the agent took a longer path, found a hack, or did not fully solve the trajectory.
+4. **Key Point Extraction**: Extract and verify all key points explicitly stated in the task description.
+5. **Verification**: Verify each action and screenshot against those key points, checking filters/sorts, apply/submit clicks, and visible effects in results.
+6. **Decision & Documentation**: Decide success/failure based on evaluation criteria; document the exact reason and failure point if failed.
+7. **Recording**: Record the label (`0/1/2`) and maintain detailed reasoning traces for each evaluation.
+8. **Trajectory Validation**: Sometimes, the trajectories may go out of date or simply become unachievable due to changes in the website, captcha systems, UI elements, etc. All reviewers must prompty notify us of such changes as soon as they become aware.
 
 ### Submitter Options
 
 Submitters have two options for conducting evaluations:
 
-- **Option 1: Conduct Your Own Evaluation**: You may conduct evaluations yourself, but you must provide proof that all steps above were followed (including evidence of 3+ independent annotators, QA review, and detailed reasoning traces). Submissions may be subject to re-evaluation by benchmark maintainers to ensure consistency.
+- **Option 1: Conduct Your Own Evaluation**: You may conduct human evaluations yourself, but you must provide proof that all steps above were followed (including evidence of 3+ independent annotators, QA review, and detailed reasoning traces). Submissions may be subject to re-evaluation by benchmark maintainers to ensure consistency. You will not be added to the leaderboard if you conduct your own human evaluations.
 
 - **Option 2: Use Official Evaluation Partner** (Recommended): Use [Careerflow.ai](https://careerflow.ai/human-data) as our official trusted evaluation partner. Evaluations conducted through Careerflow automatically meet all process requirements and scores are accepted without additional review. See the [Official Evaluation Partner](#official-evaluation-partner) section for details.
 
@@ -125,6 +127,7 @@ Submitters who use Careerflow for their human evaluations benefit from:
 3. **Consistency**: All evaluations use the same criteria and process, ensuring fair leaderboard comparisons
 4. **Transparency**: Detailed evaluation reports provide insights into agent performance and failure modes
 5. **Reliability**: Multi-annotator consensus reduces individual evaluator bias
+6. **Low Cost**: We have negotiated consistent rates for all submitters to get a fair and timely evaluation. Part of the rates including ongoing support for continued web agent research work.
 
 ### Contact and Submission Process
 
@@ -133,7 +136,7 @@ For submissions requiring human evaluation, please contact Careerflow directly:
 - **Website**: [careerflow.ai](https://careerflow.ai/human-data)
 - **Evaluation Request**: Contact directly through the website or reach out to us for referral
 
-**Note**: While submitters may conduct their own evaluations, the benchmark maintainers reserve the right to re-evaluate submissions using the official partner to ensure consistency and fairness. 
+**Note**: While submitters may conduct their own evaluations, the benchmark maintainers reserve the right to request submitters t o get submissions re-evaluated using the official partner to ensure consistency and fairness. 
 
 ### Submission Requirements
 
