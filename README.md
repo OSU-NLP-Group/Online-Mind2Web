@@ -47,6 +47,12 @@ We will regularly update Online-Mind2Web by replacing outdated or invalid tasks 
 To ensure fair comparisons, we will aim to keep the updated tasks on the same websites as before and with a similar reference length. Additionally, once agent performance saturates on Online-Mind2Web, we will also revise simple tasks to preserve its long-term value.
 
 ### Update History
+#### 2026/01/02
+<details>
+<summary>🧩 Updated Task IDs</summary>
+['547f5729c59d5d12a457a3ebb74c31c6']
+</details>
+
 #### 2025/12/14
 <details>
 <summary>🧩 Updated Task IDs</summary>
