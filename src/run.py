@@ -49,7 +49,9 @@ def auto_eval(args, task_subset, final_predicted_labels, lock, model):
             if is_v2:
                 # v2: action_history is a list of ActionStep objects
                 steps = result["action_history"]
-                action_history = [step["action"] for step in steps]
+                # Drop the final step's action (e.g. TASK_COMPLETE/ANSWER): it is the
+                # agent's output, not a factual action, and may cause false positives.
+                action_history = [step["action"] for step in steps[:-1]]
                 thoughts = [step.get("thought") for step in steps]
                 # Build screenshot paths from each step's screenshot field
                 screenshot_paths = [
