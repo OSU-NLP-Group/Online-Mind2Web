@@ -30,6 +30,7 @@
 # Online-Mind2Web benchmark
 
 ## News
+* [07/08/2026] We updated 18 tasks that were outdated / invalid based on website updates. Please check out the updated tasks! 
 * [05/23/2026] We introduce the [**v2 submission schema**](./data/schema_v2/README.md) to better facilitate human evaluation of your submissions. We have also outsourced human evaluation, which means your submissions can now be reviewed within a few days. See the [Submission](#submission) section for details.
 * [11/03/2025] We’ve updated 36 tasks that are no longer valid or involve websites with CAPTCHA verification. Please check out the updated tasks!
 * [07/08/2025] 🎉 Online-Mind2Web has been accepted to COLM 2025!
@@ -48,6 +49,12 @@ We will regularly update Online-Mind2Web by replacing outdated or invalid tasks 
 To ensure fair comparisons, we will aim to keep the updated tasks on the same websites as before and with a similar reference length. Additionally, once agent performance saturates on Online-Mind2Web, we will also revise simple tasks to preserve its long-term value.
 
 ### Update History
+#### 2026/07/08
+<details>
+<summary>🧩 Updated Task IDs</summary>
+['64345c365f544375357c7b67917f08a0_070826', 'a69d2934fe54fef165490a5a2d95bf38_070826', '0b2623e9fa5cea997f76490bcbc5220f_070826', '0b838cd54f826c59c71f600c56b89a11_070826', '157f4a79d55e8fa3fd55ba772ba40fbc_070826', '47186fac8e7c7277af01144644eb4e0b_070826', '824eb7bb0ef1ce40bfd49c12182d9428_070826', '9d090a15c214eb070d9caa8a034d03c1_070826', 'e24662008c3be5d56f986f232fcec447_070826', 'fc53ddd3421411a41c1020a3fdc84ec4_070826', '816851ff92ff0219acf4364dcc2c4692_070826', '59912927c1fddee6ded8a49986896bc2_070826', '046138801a05ddf56ad94e8672942496_070826', '199be0b54a436daee74247971fc684ee_070826', 'ba2a469af584f16da93ce6a7430cf7e5_070826', '3443e9c3151fef19a3c3a45eb2c13640_070826', '9ed3827266b3b804f485859c3d00401e_070826']
+</details>
+
 #### 2026/05/15
 <details>
 <summary>🧩 Updated Task IDs</summary>
@@ -102,9 +109,14 @@ We use the **v2 submission schema** (`online-mind2web-v2`) for trajectory submis
 
 Each submission is a directory per task containing a `result.json` and a `trajectory/` folder with per-step screenshots. The `result.json` follows the v2 schema with fields including `schema_version`, `task`, `task_id`, `agent_final_answer`, `reference_length`, and an `action_history` of structured step objects.
 
-**Review policy**
-- **Auto-eval**: We provide free review for auto-eval submissions.
+**Review and Leaderboard policy**
+
+**For commercial submissions to appear on the leaderboard, a submission must include both auto-eval and
+human-eval results for the full task set, submitted together.** We report auto-evaluated and human-evaluated success rates as separate entries, and the human-eval result is the authoritative score used for ranking. Submissions that provide only auto-eval or only human-eval will not be listed. _(This does not apply to academic submissions)_
+
+- **Auto-eval**: We provide free review for the WebJudge auto-eval portion of a submission.
 - **Human eval**: We have outsourced human evaluation for reviewing submissions. See the [full pricing and review details](./data/schema_v2/HUMAN_EVALUATION_PRICING.md).
+
 - **Academic submissions**: For submissions from academia, the Online-Mind2Web team can still provide free evaluation. The turnaround time is usually longer than outsourced human evaluation, so please notify us **1-2 weeks in advance**.
 
 Examples for both formats are available under [`data/example/`](./data/example/) (`example_v1/` and `example_v2/`). For the full schema specification, action dictionary, validation rules, and migration guide from v1, see the [v2 schema README](./data/schema_v2/README.md). For submission instructions, leaderboard access, and submission status, visit the [Leaderboard](https://huggingface.co/spaces/osunlp/Online_Mind2Web_Leaderboard).
