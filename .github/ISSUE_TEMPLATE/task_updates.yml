@@ -1,0 +1,62 @@
+name: Task updates
+description: Report outdated or invalid tasks and propose updated task versions.
+title: "[Task Updates] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A single issue may include multiple tasks. Complete a separate task section for each task. See the [contribution guidelines](https://github.com/OSU-NLP-Group/Online-Mind2Web/blob/main/CONTRIBUTING.md#propose-task-updates) for details.
+  - type: input
+    id: dataset_version
+    attributes:
+      label: Dataset Version
+      description: The Hugging Face dataset revision (commit hash or tag) used for these updates.
+    validations:
+      required: true
+  - type: textarea
+    id: task_updates
+    attributes:
+      label: Task Updates
+      description: Fill out the section below. For multiple tasks, copy and repeat the entire section in this field. You can attach screenshots here.
+      value: |
+        ### Task ID: <task_id>
+
+        **Task:**
+        The original task description, copied exactly from the dataset.
+
+        **Reference Length:**
+        The number of actions in the original human reference trajectory.
+
+        **Feedback:**
+        Describe the issue you observed with the original task.
+        Explain how to reproduce it and include supporting screenshots or links.
+
+        **Updated Task:**
+        The proposed revised task description.
+        If no change is proposed, explicitly state “No change”.
+
+        **Updated Reference Length:**
+        The number of actions in the human reference trajectory for the updated task.
+        If you have not completed the updated task, write “Not verified”.
+
+        **Update Rationale:**
+        Explain why the task is revised in this specific way and how the changes
+        address the feedback. Clearly identify any changes to the original
+        requirements, such as the website, location, product, or time range.
+
+        **Reference History:**
+        List the actions you performed to complete the updated task, in order.
+        Include the verification date, observed result, and supporting screenshots.
+
+        ---
+
+        <!-- Repeat the task section above for each additional task. -->
+        <!-- Review, Updated ID, and Status will be provided by maintainers for each task. -->
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Principle
+
+        We aim to avoid changing the website or the task itself as much as possible to ensure fair comparison with previous results (unless necessary, e.g., when the core functionality required by the task is removed from the website or when stronger CAPTCHA protections are introduced). We also try to keep the number of steps required to complete the updated task similar to the original one, so that the difficulty level remains similar.

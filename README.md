@@ -29,6 +29,12 @@
 
 # Online-Mind2Web benchmark
 
+<h3>We aim to maintain Online-Mind2Web as a rigorous benchmark for the long-term development and evaluation of web agents. Given our team's limited bandwidth and resources, we encourage the community to help maintain and update the benchmark.</h3>
+
+- **Task Updates:** You can report outdated or invalid tasks and propose updated task versions through an [issue](https://github.com/OSU-NLP-Group/Online-Mind2Web/issues/new?template=task_updates.yml). A single issue may include multiple tasks, with separate feedback, update rationale, and human reference trajectories for each task. Please see the [contribution guidelines](./CONTRIBUTING.md#propose-task-updates) for details.
+
+- <a name="webjudge-update"></a>**o4-mini Deprecation:** The `o4-mini` model used for our previous WebJudge evaluations is no longer available, and we need to identify a replacement. We encourage the community to help evaluate affordable frontier models (e.g., [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna)) as alternative backbones for WebJudge. We would appreciate any [comparative findings](https://github.com/OSU-NLP-Group/Online-Mind2Web/issues/new), particularly regarding their agreement with human judgments. Results obtained using a different backbone model are not directly comparable with our previous `o4-mini` results. We therefore plan to separate leaderboard results by the model used for automatic evaluation and explicitly label the model for each result.
+
 ## News
 * [05/23/2026] We introduce the [**v2 submission schema**](./data/schema_v2/README.md) to better facilitate human evaluation of your submissions. We have also outsourced human evaluation, which means your submissions can now be reviewed within a few days. See the [Submission](#submission) section for details.
 * [11/03/2025] We’ve updated 36 tasks that are no longer valid or involve websites with CAPTCHA verification. Please check out the updated tasks!
@@ -43,7 +49,7 @@ Online-Mind2Web includes 300 diverse tasks from 136 popular websites across vari
 
 ## Update Tasks
 
-We will regularly update Online-Mind2Web by replacing outdated or invalid tasks (e.g., due to website changes) to maintain its value as a rigorous benchmark for web agents. If you find any tasks are outdated, please reach out to us, and we will update them.
+We will regularly update Online-Mind2Web by replacing outdated or invalid tasks (e.g., due to website changes) to maintain its value as a rigorous benchmark for web agents. If you find an outdated task, please report it and propose an update through an [issue](https://github.com/OSU-NLP-Group/Online-Mind2Web/issues/new?template=task_updates.yml). See the [contribution guidelines](./CONTRIBUTING.md#propose-task-updates) for details.
 
 To ensure fair comparisons, we will aim to keep the updated tasks on the same websites as before and with a similar reference length. Additionally, once agent performance saturates on Online-Mind2Web, we will also revise simple tasks to preserve its long-term value.
 
@@ -110,6 +116,9 @@ Each submission is a directory per task containing a `result.json` and a `trajec
 Examples for both formats are available under [`data/example/`](./data/example/) (`example_v1/` and `example_v2/`). For the full schema specification, action dictionary, validation rules, and migration guide from v1, see the [v2 schema README](./data/schema_v2/README.md). For submission instructions, leaderboard access, and submission status, visit the [Leaderboard](https://huggingface.co/spaces/osunlp/Online_Mind2Web_Leaderboard).
 
 # Automatic Evaluator via LLM-as-a-Judge (WebJudge)
+
+For model availability and planned leaderboard changes, see the [WebJudge Update](#webjudge-update).
+
 To enhance the reliability and scalability of the evaluation process in online environments, We propose a more reliable automatic evaluation method called **WebJudge**, which consists of three parts. (1) Key Point Identification: The model is prompted to identify several key points necessary for completing the task, based on the given instruction and task description. (2) Key Screenshot Identification: Important screenshots are selected from the agent’s trajectory to retain relevant visual evidence while discarding uninformative frames. (3) Outcome Judgment: Output the judgement result based on the task description, key points, key screenshots, and the action history. Our method preserves critical intermediate screenshots while mitigating the token overload issue.
 
 <p align="center">
