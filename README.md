@@ -37,7 +37,7 @@
 
 <a name="webjudge-update"></a>
 
-Following [o4-mini's retirement](https://developers.openai.com/api/docs/deprecations), we evaluated **GPT-6 Luna** as a replacement backbone for WebJudge on six agents' trajectories in our paper. The results show comparable or better agreement with human judgments, as summarized below.
+Following [o4-mini's retirement](https://developers.openai.com/api/docs/deprecations), we evaluated **GPT-6 Luna** as a replacement backbone for WebJudge on six agents' trajectories in our paper, using the model's default reasoning effort (`medium`). The results show comparable or better agreement with human judgments, as summarized below.
 
 | Agent / Agreement | o4-mini | GPT-6 Luna |
 |---|---:|---:|
